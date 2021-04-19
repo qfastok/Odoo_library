@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="library_list_action" model="ir.actions.act_window">
+
+        <field name="name">Library</field>
+        <field name="res_model">library.rental</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Add book
+            </p>
+        </field>
+
+    </record>
+    <menuitem name="Library"
+              id="main_library_menu"
+              sequence="0"/>
+    <menuitem id="library_book_menu" name="Books"
+              parent="main_library_menu"/>
+    <menuitem id="books_menu" name="Books" parent="library_book_menu"
+              action="library_list_action"/>
+
+    <menuitem id="library_partners_menu" name="Partners"
+              parent="main_library_menu"/>
+    <menuitem id="books_partners" name="Partners" parent="library_partners_menu"
+              action="library_list_action"/>
+
+    <menuitem id="library_rentals_menu" name="Rentals"
+              parent="main_library_menu"/>
+    <menuitem id="rentals_menu" name="Rentals" parent="library_rentals_menu"
+              action="library_list_action"/>
+
+    <menuitem id="library_publishers_menu" name="Publishers"
+              parent="main_library_menu"/>
+    <menuitem id="publishers_menu" name="Publishers" parent="library_publishers_menu"
+              action="library_list_action"/>
+
+
+</odoo>
